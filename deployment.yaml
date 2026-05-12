@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: devops-deployment
+  name: devops-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: devops-deployment
+    spec:
+      containers:
+      - image: devops-exam-app
+        imagePullPolicy: Never
+        name: devops-exam-app
+        resources: {}
+status: {}
